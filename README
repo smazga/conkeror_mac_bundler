@@ -1,0 +1,9 @@
+This is all based on the make_app.sh and xulrunner.c files from http://conkeror.org/InstallationOSX
+
+Requirements:
+ xcode (for gcc)
+ firefox (installed in /Applications)
+ git
+
+To create and install the bundle as Conkeror.app, simply run:
+ make install
