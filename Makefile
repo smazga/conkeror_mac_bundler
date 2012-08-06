@@ -10,6 +10,7 @@ LPROJ := $(wildcard $(FIREFOX)/Contents/Resources/*.lproj)
 .PHONY: all
 all: clean $(CONKEROR)
 
+.PHONY: $(STAGE)
 $(STAGE):
 	cd $@ 2>/dev/null && $(GIT) pull || $(GIT) clone $(REPO) $@
 
