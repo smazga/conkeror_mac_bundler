@@ -61,5 +61,9 @@
 
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string> <!-- I have no good reference as to why this is 6.0 -->
+    <key>NSSupportsAutomaticGraphicsSwitching</key>
+    <true/>
+    <key>NSPrincipalClass</key>
+    <string>GeckoNSApplication</string>
   </dict>
 </plist>
