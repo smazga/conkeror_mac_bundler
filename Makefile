@@ -41,12 +41,13 @@ $(STAGE):
 	$(CC) $(@F).c -o $@
 
 %/conkeror-spawn-helper: % $(STAGE)
+	mkdir -p $(@D)
 	$(CC) $(STAGE)/$(@F).c -o $@
 
 $(CONKEROR): \
+ $(CONKEROR)/conkeror/conkeror-spawn-helper \
  $(CONKEROR)/Contents/MacOS \
  $(CONKEROR)/Contents/MacOS/xulrunner \
- $(CONKEROR)/Contents/MacOS/conkeror-spawn-helper \
  $(CONKEROR)/Contents/MacOS/conkeror \
  $(CONKEROR)/Contents/Resources \
  $(CONKEROR)/Contents/Info.plist
