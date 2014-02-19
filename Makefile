@@ -55,7 +55,7 @@ $(CONKEROR): \
 
 .PHONY: install
 install: $(CONKEROR)
-	@mv /Applications/$(CONKEROR) $(CONKEROR).backup
+	@-mv /Applications/$(CONKEROR) $(CONKEROR).backup
 	mv $(CONKEROR) /Applications
 	@rm -rf $(CONKEROR).backup
 
