@@ -45,7 +45,7 @@ $(STAGE):
 	$(CC) $(STAGE)/$(@F).c -o $@
 
 $(CONKEROR): \
- $(CONKEROR)/conkeror/conkeror-spawn-helper \
+ $(CONKEROR)/Contents/MacOS/conkeror/conkeror-spawn-helper \
  $(CONKEROR)/Contents/MacOS \
  $(CONKEROR)/Contents/MacOS/xulrunner \
  $(CONKEROR)/Contents/MacOS/conkeror \
