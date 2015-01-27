@@ -29,7 +29,7 @@ $(STAGE):
 	mkdir -p $(@D)
 	cp Info.plist $@
 
-%/conkeror: %
+%/conkeror: % $(STAGE)
 	mkdir -p $@/conkeror
 	@echo copying files...
 	@$(foreach file,$(FILES),cp -p $(STAGE)/$(file) $@; )
