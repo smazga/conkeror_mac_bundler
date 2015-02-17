@@ -12,7 +12,7 @@
 /*     printf("buffer too small; need size %u\n", size); */
 /* } */
 
-#define FIREFOX_BINARY "firefox"
+#define FIREFOX_BINARY "xulrunner"
 #define APPLICATION_INI "conkeror/application.ini"
 #define APP " -app "
 
