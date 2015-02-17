@@ -33,7 +33,7 @@
     <string>English</string>
 
     <key>CFBundleExecutable</key>
-    <string>xulrunner</string>
+    <string>xulrunner_launcher</string>
 
     <key>CFBundleGetInfoString</key>
     <string>Conkeror 1.0pre, A 100% keyboard driven mozilla based web browser.</string>
