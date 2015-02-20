@@ -1,6 +1,6 @@
 #!/bin/bash
 
-xulrunner_version=33.1.1
+xulrunner_version=35.0.1
 xulrunner_tarball=xulrunner-${xulrunner_version}.bz2
 
 app_name=Conkeror.app
@@ -57,6 +57,15 @@ create_app() {
 	cc csh.c -o ${app_name}/Contents/MacOS/conkeror/conkeror-spawn-helper
 
 	cp images/conkeror.icns ${app_name}/Contents/Resources
+
+	(
+	cat <<-EOF
+		libmozglue.dylib
+		libnss3.dylib
+		libmozalloc.dylib
+		XUL
+	EOF
+	) > ${app_name}/Contents/Resources/dependentlibs.list
 
 	if [ -d ~/Applications/${app_name} ]; then
 		if [ -d ~/Applications/${app_name}-previous ]; then
