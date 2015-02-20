@@ -11,18 +11,18 @@ files="application.ini chrome.manifest content-policy.manifest"
 subdirs="branding chrome components content contrib defaults help locale modules search-engines style tests"
 
 clean() {
-	rm -rf Conkeror.app csh.c
+	rm -rf Conkeror.app csh.c XUL.framework
 }
 
 distclean() {
 	clean
-	rm -rf $xulrunner_tarball XUL.framework conkeror.git
+	rm -rf $xulrunner_tarball conkeror.git
 	exit 0
 }
 
 download() {
 	if [ ! -f $xulrunner_tarball ]; then
-		echo "[ Downloading xulrunner ]"
+		echo "[ Downloading xulrunner $xulrunner_version ]"
 		curl ftp://ftp.mozilla.org:/pub/xulrunner/releases/${xulrunner_version}/runtimes/xulrunner-${xulrunner_version}.en-US.mac.tar.bz2 -o $xulrunner_tarball
 	fi
 
