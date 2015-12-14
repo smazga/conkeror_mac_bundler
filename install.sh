@@ -23,7 +23,7 @@ distclean() {
 download() {
 	if [ ! -f $xulrunner_tarball ]; then
 		echo "[ Downloading xulrunner $xulrunner_version ]"
-		curl ftp://ftp.mozilla.org:/pub/xulrunner/releases/${xulrunner_version}/runtimes/xulrunner-${xulrunner_version}.en-US.mac.tar.bz2 -o $xulrunner_tarball
+		curl https://ftp.mozilla.org:/pub/xulrunner/releases/${xulrunner_version}/runtimes/xulrunner-${xulrunner_version}.en-US.mac.tar.bz2 -o $xulrunner_tarball
 	fi
 
 	if [ ! -d XUL.framework ]; then
